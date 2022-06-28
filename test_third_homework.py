@@ -10,7 +10,7 @@ def test_one():
 
 
 @pytest.fixture()
-def test_two():
+def test_2():
     browser.element("[name=q]").should(be.blank).type("selene").press_enter()
 
 
