@@ -5,12 +5,12 @@ browser.config.timeout = 2
 
 
 @pytest.fixture()
-def test_one():
+def open_google():
     browser.open("https://www.google.com/ncr")
 
 
 @pytest.fixture()
-def test_2():
+def test_open():
     browser.element("[name=q]").should(be.blank).type("selene").press_enter()
 
 
