@@ -5,12 +5,12 @@ browser.config.timeout = 2
 
 
 @pytest.fixture()
-def test_one():
+def test_open_google():
     browser.open("https://www.google.com/ncr")
 
 
 @pytest.fixture()
-def test_2():
+def test_open():
     browser.element("[name=q]").should(be.blank).type("selene").press_enter()
 
 
@@ -20,7 +20,7 @@ def config_browser():
     browser.window_height = 1000
 
 
-def test_positive(open_google, test_open):
+def test_positive(test_open_google, test_open):
     browser.element("[id=search]").should(have.text("Selene - User-oriented Web UI browser tests in Python"))
 
 
